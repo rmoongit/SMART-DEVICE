@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Описание проекта">
+  <title>Smart Device</title>
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container header__wrapper">
+
+        <div class="header__logo logo">
+          <a class="logo__link" href="#">
+            <svg class="header__logo-img" focusable="false" width="55" height="55" aria-label="главный логотип">
+              <use xlink:href="img/sprite_auto.svg#main-logo"></use>
+            </svg>
+            <svg class="header__logo-mobile-img" focusable="false" width="35" height="35" aria-label="главный логотип">
+              <use xlink:href="img/sprite_auto.svg#main-logo"></use>
+            </svg>
+            <div class="logo__text">
+              <p class="logo__text-suptitle">Smart Device</p>
+              <span>умные технологии</span>
+            </div>
+          </a>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__list">
+
+            <li class="header__item">
+              <a class="header__link" href="mailto:info@sd.ru">
+                <svg class="header__item-icon" width="20" height="20" aria-label="иконка почты">
+                  <use xlink:href="img/sprite_auto.svg#email"></use>
+                </svg>
+                <span class="header__link-text">info@sd.ru</span>
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="tel:+74950005252">
+                <svg class="header__item-icon" width="20" height="20" aria-label="иконка телефона">
+                  <use xlink:href="img/sprite_auto.svg#phone-call"></use>
+                </svg>
+                <span class="header__link-text">+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="btn btn--button-call" type="button">
+          Заказать звонок
+        </button>
+
+    </header>
+  </div>
+  <main>
+    <section class="intro">
+      <div class="container">
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+
+    </div>
+  </footer>
+  </div>
+
+
+  <!-- <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
+  <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p> -->
+
+  <!-- Модалки -->
+  <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Обычная модалка</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

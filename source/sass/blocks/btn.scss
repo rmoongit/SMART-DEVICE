@@ -1,0 +1,32 @@
+.btn {
+  display: inline-flex;
+  padding: 10px 20px;
+  color: $color-default-white;
+  background-color: $color-neon-blue;
+  border: none;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  &--button-call {
+    background-color: $color-transparent;
+    border: solid 1px $color-alice-blue;
+    font-family: $font-roboto-condensed;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
