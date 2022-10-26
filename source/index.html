@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
   <meta name="description" content="Описание проекта">
   <title>Smart Device</title>
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -21,10 +21,12 @@
 
         <div class="header__logo logo">
           <a class="logo__link" href="#">
-            <svg class="header__logo-img" focusable="false" width="55" height="55" aria-label="главный логотип">
+            <svg class="logo__img" aria-hidden="true" focusable="false" width="55" height="55"
+              aria-label="главный логотип">
               <use xlink:href="img/sprite_auto.svg#main-logo"></use>
             </svg>
-            <svg class="header__logo-mobile-img" focusable="false" width="35" height="35" aria-label="главный логотип">
+            <svg class="logo__mobile-img" aria-hidden="true" focusable="false" width="35" height="35"
+              aria-label="главный логотип">
               <use xlink:href="img/sprite_auto.svg#main-logo"></use>
             </svg>
             <div class="logo__text">
@@ -39,7 +41,8 @@
 
             <li class="header__item">
               <a class="header__link" href="mailto:info@sd.ru">
-                <svg class="header__item-icon" width="20" height="20" aria-label="иконка почты">
+                <svg class="header__item-icon" focusable="false" aria-hidden="true" width="20" height="20"
+                  aria-label="иконка почты">
                   <use xlink:href="img/sprite_auto.svg#email"></use>
                 </svg>
                 <span class="header__link-text">info@sd.ru</span>
@@ -47,7 +50,8 @@
             </li>
             <li class="header__item">
               <a class="header__link" href="tel:+74950005252">
-                <svg class="header__item-icon" width="20" height="20" aria-label="иконка телефона">
+                <svg class="header__item-icon" focusable="false" aria-hidden="true" width="20" height="20"
+                  aria-label="иконка телефона">
                   <use xlink:href="img/sprite_auto.svg#phone-call"></use>
                 </svg>
                 <span class="header__link-text">+7 (495) 000 52 52</span>
@@ -60,20 +64,191 @@
           Заказать звонок
         </button>
 
+      </div>
     </header>
-  </div>
-  <main>
-    <section class="intro">
-      <div class="container">
+
+    <main>
+
+      <section class="intro">
+        <div class="intro__wrapper contanier">
+          <h1 class="intro__title">Печатные платы</h1>
+          <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a class="intro__link" href="#consult">Получить бесплатную консультацию</a>
+        </div>
+      </section>
+
+      <article class="benefits">
+        <div class="benefits__wrapper container">
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <svg class="benefits__icon" focusable="false" aria-hidden="true" width="35" height="35" aria-label="часы">
+                <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
+              </svg>
+              <h3 class="benefits__suptitle">Оперативные сроки</h3>
+              <p class="benefits__text">Усовершенствованная логистическая система позволяет нам просчитывать стоимость,
+                производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+            </li>
+            <li class="benefits__item">
+              <svg class="benefits__icon" focusable="false" aria-hidden="true" width="35" height="35"
+                aria-label="поставщики">
+                <use xlink:href="img/sprite_auto.svg#hired"></use>
+              </svg>
+              <h3 class="benefits__suptitle">Крупные поставщики</h3>
+              <p class="benefits__text">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE,
+                HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
+              </p>
+            </li>
+            <li class="benefits__item">
+              <svg class="benefits__icon" focusable="false" aria-hidden="true" width="35" height="35"
+                aria-label="конфидициальность">
+                <use xlink:href="img/sprite_auto.svg#detective"></use>
+              </svg>
+              <h3 class="benefits__suptitle">Полная конфиденциальность</h3>
+              <p class="benefits__text">По желанию клиента мы обеспечиваем полную конфиденциальность.
+              </p>
+            </li>
+            <li class="benefits__item">
+              <svg class="benefits__icon" focusable="false" aria-hidden="true" width="35" height="35"
+                aria-label="стоимость">
+                <use xlink:href="img/sprite_auto.svg#tag"></use>
+              </svg>
+              <h3 class="benefits__suptitle">Персонализация стоимости</h3>
+              <p class="benefits__text">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить
+                ту цену, которая Вас устраивает.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="company">
+        <div class="company__wrapper container">
+          <img class="company__img" src="img/2022.png" width="150" height="320" alt="Год 2022">
+
+          <div class="company__about">
+            <h3 class="company__title">
+              О компании
+            </h3>
+            <p class="company__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
+              мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+
+              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+              Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
+              (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
+              Производители светотехники России.
+            </p>
+
+            <p class="company__text visually-hidden">Smart Device - это команда профессионалов. Через нас прошло более 1
+              000 000
+              клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14
+              офисов по всей стране и 20 городов присутствия.
+              Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании.
+              Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
+
+            <button class="company__button btn" type="button">Подробнее</button>
+          </div>
+
+        </div>
+      </article>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper container">
+
+        <div class="footer__logo logo">
+          <a class="logo__link" href="#">
+            <svg class="logo__img" aria-hidden="true" focusable="false" width="55" height="55"
+              aria-label="главный логотип">
+              <use xlink:href="img/sprite_auto.svg#main-logo"></use>
+            </svg>
+            <svg class="logo__mobile-img" aria-hidden="true" focusable="false" width="35" height="35"
+              aria-label="главный логотип">
+              <use xlink:href="img/sprite_auto.svg#main-logo"></use>
+            </svg>
+            <div class="logo__text">
+              <p class="logo__text-suptitle">Smart Device</p>
+              <span>умные технологии</span>
+            </div>
+          </a>
+
+          <ul class="footer__icon-list">
+            <li class="footer__icon-list-item">
+              <a href="#" class="footer__icon-link">
+                <svg class="footer__icon-img" aria-hidden="true" focusable="false" width="30" height="30"
+                  aria-label="одноклассники">
+                  <use xlink:href="img/sprite_auto.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__icon-list-item">
+              <a href="#" class="footer__icon-link">
+                <svg class="footer__icon-img" aria-hidden="true" focusable="false" width="30" height="30"
+                  aria-label="вконтакте">
+                  <use xlink:href="img/sprite_auto.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__icon-list-item">
+              <a href="#" class="footer__icon-link">
+                <svg class="footer__icon-img" aria-hidden="true" focusable="false" width="30" height="30"
+                  aria-label="пайнтерест">
+                  <use xlink:href="img/sprite_auto.svg#painterest"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__list-wrapper">
+          <h4 class="footer__title">Разделы сайта</h4>
+          <ul class="footer__list footer__list--site">
+
+            <li class="footer__item">
+              <a class="footer__list-link" href="#">О Компании</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__list-link" href="#">Продукты</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__list-link" href="#">Производство печатных плат</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__list-link" href="#">Монтаж печатных плат</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__list-link" href="#">Комплектующие</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__list-link" href="#">Доставка</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__list-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__list-wrapper">
+          <h4 class="footer__title">Наш офис</h4>
+          <ul class="footer__list footer__list--office">
+
+            <li class="footer__item">
+              г. Мытищи, Олимпийский проспект, д.10
+            </li>
+            <li class="footer__item">
+              <a class="footer__list-link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__list-link" href="tel:+79253895829">+7 (925) 389-58-29</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__list-link" href="tel:+79253647813">+7 (925) 364-78-13</a>
+            </li>
+          </ul>
+        </div>
 
       </div>
-    </section>
-  </main>
-  <footer>
-    <div class="container">
-
-    </div>
-  </footer>
+    </footer>
   </div>
 
 
@@ -99,7 +274,8 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена
+          анимация-скейл</p>
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
           <svg width="15" height="15">
             <use xlink:href="img/sprite_auto.svg#icon-close"></use>

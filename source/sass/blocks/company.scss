@@ -1,0 +1,39 @@
+.company__wrapper {
+  display: flex;
+}
+
+.company__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: $font-roboto-condensed;
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 700;
+  color: $color-black-pearl;
+}
+
+.company__text {
+  color: $color-black-pearl;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.company__button {
+  font-family: $font-roboto-condensed;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 3px;
+  width: 180px;
+  height: 45px;
+  background-color: transparent;
+  border: 1px solid $color-sky-blue;
+  color: $color-sky-blue;
+  padding: 14px 13px 8px;
+  justify-content: center;
+}
+
+.company__img {
+  margin-right: 100px;
+}

@@ -31,3 +31,21 @@
   font-size: 25px;
   line-height: 29px;
 }
+
+.logo__img {
+  @include vp-767 {
+    display: none;
+  }
+
+  @include vp-1919 {
+    display: block;
+  }
+}
+
+.logo__mobile-img {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}

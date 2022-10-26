@@ -33,21 +33,3 @@
     display: none;
   }
 }
-
-.header__logo-img {
-  @include vp-767 {
-    display: none;
-  }
-
-  @include vp-1919 {
-    display: block;
-  }
-}
-
-.header__logo-mobile-img {
-  display: none;
-
-  @include vp-767 {
-    display: block;
-  }
-}
