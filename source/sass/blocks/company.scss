@@ -1,5 +1,10 @@
+.company {
+  margin-bottom: 100px;
+}
+
 .company__wrapper {
   display: flex;
+  align-items: center;
 }
 
 .company__title {
@@ -8,17 +13,29 @@
   font-family: $font-roboto-condensed;
   font-size: 36px;
   line-height: 50px;
-  font-weight: 700;
+  font-weight: 400;
   color: $color-black-pearl;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .company__text {
   color: $color-black-pearl;
   margin: 0;
   margin-bottom: 20px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+  }
 }
 
 .company__button {
+  cursor: pointer;
   font-family: $font-roboto-condensed;
   font-weight: 700;
   text-transform: uppercase;
@@ -30,10 +47,23 @@
   background-color: transparent;
   border: 1px solid $color-sky-blue;
   color: $color-sky-blue;
-  padding: 14px 13px 8px;
+  padding: 0 13px;
   justify-content: center;
+
+  @include vp-767 {
+    width: 160px;
+    height: 35px;
+  }
 }
 
 .company__img {
-  margin-right: 100px;
+  margin-right: 77px;
+
+  @include vp-767 {
+    display: none;
+  }
+
+  @include vp-1023 {
+    margin-right: 28px;
+  }
 }

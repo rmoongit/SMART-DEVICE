@@ -15,12 +15,15 @@ $color-torch-red: #ff1553;
 $color-alice-blue: #f2f5f6;
 $color-sky-blue: #00b2ff;
 $color-black-pearl: #041827;
+$color-shades-black-pearl: #041427;
 $color-grey: #ebebeb;
+$color-tints-black-pearl: rgba(4, 20, 39, 0.15);
 
 // Gradient
 
 $black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $black-to-bottom: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+$black-to-sky: linear-gradient(139deg, rgba(4, 24, 39, 0.5) 33.7%, #00b3ff 33.7%, #00b3ff 100%);
 
 // Typography
 // ---------------------------------
