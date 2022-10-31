@@ -54,6 +54,7 @@
 }
 
 .intro__link {
+  cursor: pointer;
   border-radius: 3px;
   font-weight: 700;
   text-align: center;
@@ -69,6 +70,10 @@
   line-height: 21px;
   font-size: 18px;
   letter-spacing: 0.05em;
+
+  @include hover {
+    opacity: 0.8;
+  }
 
   &--mobile {
     display: none;

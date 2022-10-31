@@ -56,7 +56,7 @@
           </ul>
         </nav>
 
-        <button class="btn btn--button-call" type="button">
+        <button class="btn btn--button-call" data-open-modal="feedback" type="button">
           Заказать звонок
         </button>
 
@@ -69,8 +69,8 @@
         <div class="intro__wrapper contanier">
           <h1 class="intro__title">Печатные платы</h1>
           <p class="intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="intro__link intro__link--tablet" href="#consult">Получить бесплатную консультацию</a>
-          <a class="intro__link intro__link--mobile" href="#consult">Бесплатная консультация</a>
+          <a class="intro__link intro__link--tablet" data-consult>Получить бесплатную консультацию</a>
+          <a class="intro__link intro__link--mobile" data-consult>Бесплатная консультация</a>
         </div>
       </section>
 
@@ -131,17 +131,17 @@
               О компании
             </h3>
 
-            <p class="company__text">
+            <p class="company__text" data-company="text-1">
               Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
               мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
             </p>
-            <p class="company__text">
+            <p class="company__text" data-company="text-2">
               Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,
               HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на
               предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома,
               СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
             </p>
-            <p class="company__text visually-hidden">
+            <p class="company__text visually-hidden" data-company="text-3">
               Smart Device - это команда профессионалов. Через нас
               прошло более 1
               000 000
@@ -153,7 +153,7 @@
               Использование инновационных технологий помогает экономить деньги и время наших клиентов
             </p>
 
-            <button class="company__button" type="button">Подробнее</button>
+            <button class="company__button" type="button" data-company="button">Подробнее</button>
           </div>
 
         </div>
@@ -208,7 +208,7 @@
         </div>
       </section>
 
-      <form class="form" action="https://echo.htmlacademy.ru">
+      <form class="form" data-form action="https://echo.htmlacademy.ru">
         <div class="form__wrapper container">
 
           <div class="form__content">
@@ -221,7 +221,7 @@
               </label>
 
               <label for="phone">
-                <input type="number" id="phone" name="phone" placeholder="Телефон" required>
+                <input id="phone" name="phone" data-form="phone" placeholder="Телефон" required>
               </label>
             </div>
 
@@ -230,7 +230,7 @@
             <div class="form__aprove">
               <input type="submit" value="Задать вопрос">
               <label for="access">
-                <input class="visually-hidden" type="checkbox" id="access">
+                <input class="visually-hidden" id="access" name="access" type="checkbox" required>
                 <span>Я согласен на обработку<br>персональных данных</span>
               </label>
             </div>
@@ -281,7 +281,7 @@
         </div>
 
         <div class="footer__list-wrapper">
-          <h4 class="footer__title">Разделы сайта</h4>
+          <h4 class="footer__title" data-accordeon>Разделы сайта</h4>
 
           <ul class="footer__list footer__list--site">
 
@@ -310,7 +310,7 @@
         </div>
 
         <div class="footer__list-wrapper">
-          <h4 class="footer__title">Наш офис</h4>
+          <h4 class="footer__title" data-accordeon>Наш офис</h4>
           <ul class="footer__list footer__list--office">
 
             <li class="footer__item">
@@ -332,40 +332,91 @@
     </footer>
   </div>
 
-
-  <!-- <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-  <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p> -->
-
   <!-- Модалки -->
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
+
       <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-          </svg>
-        </button>
+        <form class="form form--modal" action="https://echo.htmlacademy.ru">
+
+          <div class="form__content form__content--modal">
+            <h3 class="form__title">Закажите звонок</h3>
+            <p class="form__text">Оставьте контакты, мы проконсультируем<br>вас бесплатно в удобное время</p>
+
+            <div class="form__field form__field--modal">
+              <label for="modal-name">
+                <input type="text" id="modal-name" name="modal-name" data-form="name" placeholder="Имя" required>
+              </label>
+
+              <label for="modal-phone">
+                <input id="modal-phone" name="modal-phone" data-form="phone" placeholder="Телефон" required>
+              </label>
+            </div>
+
+            <textarea name="modal-question" id="modal-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+
+            <div class="form__aprove form__aprove--modal">
+              <input type="submit" value="Задать вопрос">
+              <label for="modal-access">
+                <input class="visually-hidden" type="checkbox" id="modal-access" required>
+                <span>Я согласен на обработку персональных данных</span>
+              </label>
+            </div>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+            </svg>
+          </button>
+        </form>
       </div>
+
     </div>
   </div>
 
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+  <!-- <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p> -->
+
+  <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена
-          анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-          </svg>
-        </button>
+        <form class="form form--modal" action="https://echo.htmlacademy.ru">
+
+          <div class="form__content form__content--modal">
+            <h3 class="form__title">Закажите звонок</h3>
+            <p class="form__text">Оставьте контакты, мы проконсультируем<br>вас бесплатно в удобное время</p>
+
+            <div class="form__field form__field--modal">
+              <label for="modal-name">
+                <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required>
+              </label>
+
+              <label for="modal-phone">
+                <input type="number" id="modal-phone" name="modal-phone" placeholder="Телефон" required>
+              </label>
+            </div>
+
+            <textarea name="modal-question" id="modal-question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+
+            <div class="form__aprove form__aprove--modal">
+              <input type="submit" value="Задать вопрос">
+              <label for="modal-access">
+                <input class="visually-hidden" type="checkbox" id="modal-access">
+                <span>Я согласен на обработку персональных данных</span>
+              </label>
+            </div>
+          </div>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
-  </div>
-
+  </div> -->
+  <script src="https://unpkg.com/imask"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

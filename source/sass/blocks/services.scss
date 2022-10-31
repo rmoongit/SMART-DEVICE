@@ -139,6 +139,10 @@
   width: 60px;
   height: 60px;
 
+  @include hover {
+    opacity: 0.8;
+  }
+
   @include vp-767 {
     width: 40px;
     height: 40px;

@@ -12,6 +12,19 @@
     padding-top: 50px;
     padding-bottom: 125px;
   }
+
+  &--modal {
+    background: none;
+    padding: 0;
+
+    @include vp-767 {
+      padding: 0;
+    }
+
+    @include vp-1023 {
+      padding: 0;
+    }
+  }
 }
 
 .form__wrapper {
@@ -36,6 +49,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 52%;
+
+  &--modal {
+    width: 100%;
+  }
 
   @include vp-1023 {
     width: 100%;
@@ -63,6 +80,10 @@
   column-gap: 30px;
   row-gap: 20px;
   justify-content: space-between;
+
+  &--modal {
+    flex-wrap: wrap;
+  }
 
   @include vp-767 {
     flex-wrap: wrap;
@@ -140,7 +161,20 @@
     width: 265px;
     height: 45px;
 
+    @include hover {
+      opacity: 0.8;
+    }
+
     @include vp-767 {
+      width: 100%;
+    }
+  }
+
+  &--modal {
+    flex-wrap: wrap;
+    row-gap: 20px;
+
+    input[type="submit"] {
       width: 100%;
     }
   }

@@ -59,8 +59,7 @@
 
     width: 600px;
     padding: 40px;
-
-    background-color: $color-default-white;
+    background-color: $color-sky-blue;
 
     @include vp-767 {
       width: 100%;
@@ -70,7 +69,7 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
+    top: 32px;
     right: 22px;
     z-index: 1;
 
@@ -81,6 +80,10 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    svg {
+      fill: $color-default-white;
+    }
   }
 
   &--responsive {

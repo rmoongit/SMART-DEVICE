@@ -2,6 +2,11 @@
   min-height: 280px;
   background-color: $color-black-pearl;
   padding: 50px 0 55px;
+  overflow: hidden;
+
+  @include vp-767 {
+    padding-bottom: 35px;
+  }
 }
 
 .footer__wrapper {
@@ -33,7 +38,38 @@
 }
 
 .footer__list-wrapper {
+  position: relative;
   width: 100%;
+
+  @include vp-767 {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -25px;
+      content: "";
+      width: 100vw;
+      height: 1px;
+      background-color: $color-shalimar;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: -25px;
+      content: "";
+      width: 100vw;
+      height: 1px;
+      background-color: $color-shalimar;
+    }
+  }
+}
+
+.footer__list-wrapper:last-child {
+  @include vp-767 {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .footer__list {
@@ -46,6 +82,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  overflow: hidden;
+  transition: 0.3s;
 
   &--site {
     height: 144px;
@@ -53,6 +91,11 @@
     @include vp-1023 {
       height: auto;
     }
+  }
+
+  @include vp-767 {
+    flex-wrap: nowrap;
+    max-height: 0;
   }
 }
 
@@ -62,6 +105,12 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
+  }
+}
+
+.footer__item:last-child {
+  @include vp-767 {
+    padding-bottom: 20px;
   }
 }
 
@@ -75,13 +124,38 @@
 }
 
 .footer__title {
+  position: relative;
   margin: 0;
-  padding: 20px 0;
+  padding: 20px 0 20px;
   font-size: 15px;
   font-family: $font-roboto-condensed;
   line-height: 16px;
   text-transform: uppercase;
   font-weight: 400;
+
+  @include vp-767 {
+    &::after,
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      right: 0;
+      top: 50%;
+      width: 15px;
+      height: 1px;
+      background-color: $color-silver;
+    }
+
+    &::before {
+      rotate: (90deg);
+    }
+
+    &--active {
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 .footer__logo {
