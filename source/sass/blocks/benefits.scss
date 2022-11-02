@@ -1,9 +1,13 @@
 .benefits {
   min-height: 630px;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
 
   @include vp-767 {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
 }
 
@@ -13,17 +17,24 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  gap: 30px;
+  column-gap: 15px;
+  row-gap: 20px;
+
+  @include vp-1023 {
+    grid-template-columns: 48% 48%;
+    gap: 25px;
+  }
 
   @include vp-767 {
     grid-template-columns: auto;
+    gap: 20px;
   }
 }
 
 .benefits__item {
   border: 1px solid $color-grey;
   border-left: 5px solid $color-sky-blue;
-  padding: 40px 30px 35px 45px;
+  padding: 42px 40px 35px 40px;
   min-height: 300px;
 
   @include hover {
@@ -43,16 +54,17 @@
     }
   }
 
-  @include vp-767 {
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 14px;
-    line-height: 18px;
-  }
-
   @include vp-1023 {
     min-height: 360px;
+    padding: 45px 40px 30px 40px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 30px 30px 35px;
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 345px;
   }
 }
 
@@ -62,11 +74,15 @@
 
 .benefits__suptitle {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-family: $font-roboto-condensed;
   color: $color-sky-blue;
   font-size: 24px;
   line-height: 34px;
+
+  @include vp-1023 {
+    margin-bottom: 15px;
+  }
 
   @include vp-767 {
     font-size: 20px;

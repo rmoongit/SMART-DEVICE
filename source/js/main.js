@@ -8,6 +8,7 @@ import { initAccordeon } from './modules/accordeon';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.no-js').classList.remove('no-js');
 
   // Utils
   // ---------------------------------

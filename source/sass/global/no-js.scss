@@ -1,0 +1,9 @@
+.no-js {
+  .footer__title::before {
+    display: none;
+  }
+
+  .footer__list {
+    max-height: 100%;
+  }
+}
