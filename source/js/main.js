@@ -3,7 +3,7 @@ import { initModals } from './modules/modals/init-modals';
 import { initShowText } from './modules/company-text';
 import { initScroll } from './modules/scroll';
 import { initMask } from './modules/mask';
-import { initAccordeon } from './modules/accordeon';
+import { initAccordeon, resize } from './modules/accordeon';
 
 // ---------------------------------
 
@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initScroll();
   initMask();
   initAccordeon();
+  resize();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

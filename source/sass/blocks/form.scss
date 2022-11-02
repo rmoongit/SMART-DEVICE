@@ -261,7 +261,7 @@
     display: block;
   }
 
-  input[type="checkbox"]:focus + span {
-    outline: 2px solid $color-black-pearl;
+  input[type="checkbox"]:focus + span::before {
+    outline: 2px solid $color-alice-blue;
   }
 }

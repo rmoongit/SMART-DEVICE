@@ -84,17 +84,22 @@
   list-style: none;
   overflow: hidden;
   transition: 0.3s;
+  max-height: auto;
 
   &--site {
     height: 144px;
 
     @include vp-1023 {
-      height: auto;
+      height: 100%;
     }
   }
 
-  @include vp-767 {
+  @include vp-1023 {
+    max-height: auto;
     flex-wrap: nowrap;
+  }
+
+  @include vp-767 {
     max-height: 0;
   }
 }
@@ -136,6 +141,10 @@
   line-height: 16px;
   text-transform: uppercase;
   font-weight: 400;
+
+  @include focus {
+    opacity: 0.8;
+  }
 
   @include vp-1023 {
     padding: 0 0 20px;
