@@ -96,7 +96,7 @@ module.exports = {
       {
         except: ['first-nested'],
         ignore: ['after-comment'],
-      },
+      }
     ],
 
     'media-feature-colon-space-after': 'always',
@@ -118,7 +118,7 @@ module.exports = {
       {
         except: ['first-nested', 'blockless-after-blockless'],
         ignore: ['after-comment'],
-      },
+      }
     ],
     'at-rule-name-case': 'lower',
     'at-rule-name-space-after': 'always',
@@ -126,14 +126,14 @@ module.exports = {
       true,
       {
         ignoreAtRules: ['mixin', 'define-mixin', 'include', 'content', 'rules', 'each'],
-      },
+      }
     ],
     'at-rule-no-vendor-prefix': true,
     'at-rule-semicolon-newline-after': 'always',
 
-    indentation: [2, {ignore: ['inside-parens']}],
+    'indentation': [2, { ignore: ['inside-parens'] }],
 
-    'max-nesting-depth': [4, {ignoreAtRules: ['media', 'include']}],
+    'max-nesting-depth': [4, { ignoreAtRules: ['media', 'include'] }],
 
     'max-empty-lines': 2,
     'no-eol-whitespace': true,

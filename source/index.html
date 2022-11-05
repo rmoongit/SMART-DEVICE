@@ -85,7 +85,7 @@
               <svg class="benefits__icon" focusable="false" aria-hidden="true" width="35" height="35" aria-label="часы">
                 <use xlink:href="img/sprite_auto.svg#stopwatch"></use>
               </svg>
-              <h3 class="benefits__suptitle">Оперативные сроки</h3>
+              <h2 class="benefits__suptitle">Оперативные сроки</h2>
               <p class="benefits__text">Усовершенствованная логистическая система позволяет нам
                 просчитывать стоимость,
                 производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
@@ -95,7 +95,7 @@
                 aria-label="поставщики">
                 <use xlink:href="img/sprite_auto.svg#hired"></use>
               </svg>
-              <h3 class="benefits__suptitle">Крупные поставщики</h3>
+              <h2 class="benefits__suptitle">Крупные поставщики</h2>
               <p class="benefits__text">Нашими поставщиками являются такие крупные мировые компании как:
                 OSRAM, CREE,
                 HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество
@@ -107,7 +107,7 @@
                 aria-label="конфидициальность">
                 <use xlink:href="img/sprite_auto.svg#detective"></use>
               </svg>
-              <h3 class="benefits__suptitle">Полная конфиденциальность</h3>
+              <h2 class="benefits__suptitle">Полная конфиденциальность</h2>
               <p class="benefits__text">По желанию клиента мы обеспечиваем полную конфиденциальность.
               </p>
             </li>
@@ -116,7 +116,7 @@
                 aria-label="стоимость">
                 <use xlink:href="img/sprite_auto.svg#tag"></use>
               </svg>
-              <h3 class="benefits__suptitle">Персонализация стоимости</h3>
+              <h2 class="benefits__suptitle">Персонализация стоимости</h2>
               <p class="benefits__text">Мы подбираем определенную фабрику, поставщиков, вид доставки,
                 чтобы установить
                 ту цену, которая Вас устраивает.
@@ -130,28 +130,32 @@
         <div class="company__wrapper container">
 
           <picture>
-            <source type="image/webp" srcset="img/2022.webp">
-            <img src="img/2022.png" width="150" height="320" alt="Год 2022">
+            <source type="image/webp" srcset="img/2022.webp, img/2022@2x.webp 2x">
+            <img src=" img/2022.png" srcset="img/2022.webp@2x.png" width="150" height="320" loading="lazy"
+              alt="Год 2022">
           </picture>
 
           <div class="company__about">
-            <h3 class="company__title">
+            <h3>
               О компании
             </h3>
 
-            <p class="company__text" data-company="text-1">
+            <p data-company-text>
               Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
               мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
             </p>
-            <p class="company__text" data-company="text-2">
-              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-              <span class="company__paragraph" data-company="text-3">
-                Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
-                (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
+            <p data-company-text>
+              Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+              REFOND.
+              <span data-company-hide>
+                Печатные платы и комплектующие Service Devices применяются на предприятиях Российских
+                Железных Дорог
+                (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов
+                крупнейшие
                 Производители светотехники России.
               </span>
             </p>
-            <p class="company__text company__text--open" data-company="text-4">
+            <p data-company-text="open">
               Smart Device - это команда профессионалов. Через нас
               прошло более 1
               000 000
@@ -163,8 +167,7 @@
               Использование инновационных технологий помогает экономить деньги и время наших клиентов
             </p>
 
-            <button class="company__button" type="button" data-company="button"
-              aria-label="Подробнее">Подробнее</button>
+            <button type="button" data-company-button aria-label="Подробнее">Подробнее</button>
           </div>
 
         </div>
@@ -173,7 +176,8 @@
       <section class="services">
         <div class="services__wrapper container">
 
-          <h3 class="services__title services__title--tablet">Smart Device предлагает следующие товары и услуги</h3>
+          <h3 class="services__title services__title--tablet">Smart Device предлагает следующие товары и
+            услуги</h3>
           <h3 class="services__title services__title--mobile">Товары и услуги<br>Smart Device</h3>
           <ul class="services__list">
             <li class="services__list-item">
@@ -232,7 +236,7 @@
               </label>
 
               <label for="phone">
-                <input id="phone" name="phone" data-form="phone" placeholder="Телефон" required>
+                <input type="tel" id="phone" name="phone" data-form="phone" placeholder="Телефон" required>
               </label>
             </div>
 
@@ -303,7 +307,8 @@
               <a class="footer__list-link" href="#" aria-label="Продукты">Продукты</a>
             </li>
             <li class="footer__item">
-              <a class="footer__list-link" href="#" aria-label="Производство">Производство печатных<br>плат</a>
+              <a class="footer__list-link" href="#" aria-label="Производство">Производство
+                печатных<br>плат</a>
             </li>
             <li class="footer__item">
               <a class="footer__list-link" href="#" aria-label="Монтаж плат">Монтаж печатных плат</a>
@@ -328,13 +333,16 @@
               г. Мытищи, Олимпийский проспект,<br>д.10
             </li>
             <li class="footer__item">
-              <a class="footer__list-link" href="tel:+74955894050" aria-label="Телефон">+7 (495) 589-40-50</a>
+              <a class="footer__list-link" href="tel:+74955894050" aria-label="Телефон">+7 (495)
+                589-40-50</a>
             </li>
             <li class="footer__item">
-              <a class="footer__list-link" href="tel:+79253895829" aria-label="Телефон">+7 (925) 389-58-29</a>
+              <a class="footer__list-link" href="tel:+79253895829" aria-label="Телефон">+7 (925)
+                389-58-29</a>
             </li>
             <li class="footer__item">
-              <a class="footer__list-link" href="tel:+79253647813" aria-label="Телефон">+7 (925) 364-78-13</a>
+              <a class="footer__list-link" href="tel:+79253647813" aria-label="Телефон">+7 (925)
+                364-78-13</a>
             </li>
           </ul>
         </div>
@@ -353,7 +361,8 @@
 
           <div class="form__content form__content--modal">
             <h3 class="form__title">Закажите звонок</h3>
-            <p class="form__text">Оставьте контакты, мы проконсультируем<br>вас бесплатно в удобное время</p>
+            <p class="form__text">Оставьте контакты, мы проконсультируем<br>вас бесплатно в удобное время
+            </p>
 
             <div class="form__field form__field--modal">
               <label for="modal-name">
@@ -361,7 +370,7 @@
               </label>
 
               <label for="modal-phone">
-                <input id="modal-phone" name="modal-phone" data-form="phone" placeholder="Телефон" required>
+                <input type="tel" id="modal-phone" name="modal-phone" data-form="phone" placeholder="Телефон" required>
               </label>
             </div>
 
@@ -426,7 +435,6 @@
       </div>
     </div>
   </div> -->
-  <script src="https://unpkg.com/imask"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

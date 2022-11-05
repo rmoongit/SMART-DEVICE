@@ -37,49 +37,53 @@
   }
 }
 
-.company__title {
-  margin: 0;
-  margin-bottom: 15px;
-  font-family: $font-roboto-condensed;
-  font-size: 36px;
-  line-height: 50px;
-  font-weight: 400;
-  color: $color-black-pearl;
-
-  @include vp-767 {
-    font-size: 28px;
-    line-height: 40px;
-  }
-}
-
-.company__text {
-  color: $color-black-pearl;
-  margin: 0;
-  margin-bottom: 33px;
-
-  &--open {
-    display: none;
-  }
-
-  @include vp-1023 {
-    margin-bottom: 23px;
-  }
-
-  @include vp-767 {
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: 400;
+.company__about {
+  h3 {
+    margin: 0;
     margin-bottom: 15px;
-  }
-}
+    font-family: $font-roboto-condensed;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 400;
+    color: $color-black-pearl;
 
-.company__paragraph {
-  @include vp-767 {
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  p {
+    color: $color-black-pearl;
+    margin: 0;
+    margin-bottom: 33px;
+
+    @include vp-1023 {
+      margin-bottom: 23px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+
+    span {
+      display: block;
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+
+  [data-company-text="open"] {
     display: none;
   }
 }
 
-.company__button {
+button {
   cursor: pointer;
   font-family: $font-roboto-condensed;
   font-weight: 700;

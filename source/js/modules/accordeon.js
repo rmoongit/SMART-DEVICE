@@ -1,4 +1,3 @@
-import { list } from 'postcss';
 
 const accordionItem = '[data-accordion-item]';
 const accordionItemWrapper = '[data-accordion-item-wrapper]';
@@ -57,6 +56,4 @@ const resize = () => {
 
 };
 
-export { initAccordeon, resize };
-
-
+export {initAccordeon, resize};

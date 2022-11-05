@@ -1,21 +1,28 @@
-const buttonElement = document.querySelector('[data-company="button"]');
-const textElement = document.querySelector('[data-company="text-4"]');
-const paragraphElement = document.querySelector('[data-company="text-3"]');
+const buttonElement = document.querySelector('[data-company-button]');
+const textElement = document.querySelectorAll('[data-company-text]');
+const pElement = document.querySelector('[data-company-hide]');
 
 
 const showText = () => {
+  const lastElem = textElement[textElement.length - 1];
 
-  if (!textElement.classList.contains('company__text--open')) {
-    buttonElement.textContent = 'Подробнее';
-  } else {
+  if (lastElem.dataset.companyText === 'open') {
+    lastElem.dataset.companyText = '';
     buttonElement.textContent = 'Свернуть';
+  } else {
+    lastElem.dataset.companyText = 'open';
+    buttonElement.textContent = 'Подробнее';
   }
-  textElement.classList.toggle('company__text--open');
-  paragraphElement.classList.toggle('company__paragraph');
+
+  if (window.innerWidth < 767) {
+    pElement.style.display =
+      lastElem.dataset.companyText === 'open' ? 'none' : 'block';
+  }
 };
+
 
 const initShowText = () => {
   buttonElement.addEventListener('click', showText);
 };
 
-export { initShowText };
+export {initShowText};

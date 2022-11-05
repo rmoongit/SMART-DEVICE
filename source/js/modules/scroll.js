@@ -2,7 +2,7 @@ const formElement = document.querySelector('[data-form]');
 const btnElement = document.querySelectorAll('[data-consult]');
 
 const handleButtonClick = () => {
-  formElement.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  formElement.scrollIntoView({block: 'center', behavior: 'smooth'});
 };
 
 const initScroll = () => {
@@ -11,4 +11,4 @@ const initScroll = () => {
   });
 };
 
-export { initScroll };
+export {initScroll};
