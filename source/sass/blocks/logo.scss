@@ -1,23 +1,25 @@
-.logo__link {
-  display: flex;
-  align-items: center;
-  column-gap: 15px;
-}
-
-.logo__img {
-  display: block;
-
-  @include vp-767 {
-    &--header {
-      display: none;
-    }
+.logo {
+  a {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
   }
-}
 
-.logo__mobile-img {
-  display: none;
-
-  @include vp-767 {
+  svg {
     display: block;
+
+    &[data-logo-mobile] {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+
+    @include vp-767 {
+      &[data-logo-header] {
+        display: none;
+      }
+    }
   }
 }

@@ -72,10 +72,10 @@
     grid-column-gap: 30px;
     padding: 10px;
   }
-}
 
-.header__link-text {
-  @include vp-1023 {
-    display: none;
+  span {
+    @include vp-1023 {
+      display: none;
+    }
   }
 }

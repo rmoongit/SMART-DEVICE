@@ -35,6 +35,12 @@
   @include vp-1023 {
     margin: 0;
   }
+
+  a {
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
 }
 
 .footer__list-wrapper {
@@ -111,24 +117,24 @@
     font-size: 14px;
     line-height: 19px;
   }
+
+  a {
+    color: $color-default-white;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
 }
 
 .footer__item:last-child {
   @include vp-767 {
     padding-bottom: 20px;
-  }
-}
-
-.footer__list-link {
-  color: $color-default-white;
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
-
-  @include vp-767 {
-    font-size: 14px;
-    line-height: 19px;
   }
 }
 
@@ -194,11 +200,5 @@
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 15px;
-  }
-}
-
-.footer__icon-link {
-  @include hover-focus {
-    opacity: 0.8;
   }
 }

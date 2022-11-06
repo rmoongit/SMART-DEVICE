@@ -843,7 +843,7 @@ button,
   opacity: 0.8;
 }
 
-.logo__link {
+.logo a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -855,11 +855,11 @@ button,
   column-gap: 15px;
 }
 
-.logo__img {
+.logo svg {
   display: block;
 }
 
-.logo__mobile-img {
+.logo svg[data-logo-mobile] {
   display: none;
 }
 
@@ -893,6 +893,10 @@ button,
   padding: 0;
   margin: 40px 15px 0;
   list-style: none;
+}
+
+.footer__icon-list a.focus-visible:focus {
+  opacity: 0.8;
 }
 
 .footer__list-wrapper {
@@ -933,11 +937,11 @@ button,
   opacity: 0.7;
 }
 
-.footer__list-link {
+.footer__item a {
   color: #ffffff;
 }
 
-.footer__list-link.focus-visible:focus {
+.footer__item a.focus-visible:focus {
   opacity: 0.8;
 }
 
@@ -960,10 +964,6 @@ button,
   width: 100%;
 }
 
-.footer__icon-link.focus-visible:focus {
-  opacity: 0.8;
-}
-
 .intro {
   min-height: 880px;
   background-image: url("../img/main-background.jpg");
@@ -979,7 +979,7 @@ button,
   padding: 300px 25px 0 25px;
 }
 
-.intro__title {
+.intro__wrapper h1 {
   font-family: "Roboto-Condensed", "Arial", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -989,7 +989,7 @@ button,
   margin-bottom: 40px;
 }
 
-.intro__text {
+.intro__wrapper p {
   font-size: 22px;
   line-height: 34px;
   margin: 0;
@@ -1054,11 +1054,7 @@ button,
   min-height: 300px;
 }
 
-.benefits__icon {
-  fill: #00b2ff;
-}
-
-.benefits__suptitle {
+.benefits__item h2 {
   margin: 0;
   margin-bottom: 30px;
   font-family: "Roboto-Condensed", "Arial", sans-serif;
@@ -1067,9 +1063,13 @@ button,
   line-height: 34px;
 }
 
-.benefits__text {
+.benefits__item p {
   margin: 0;
   color: #041827;
+}
+
+svg {
+  fill: #00b2ff;
 }
 
 .company {
@@ -1157,7 +1157,7 @@ button.focus-visible:focus {
   padding-bottom: 140px;
 }
 
-.services__title {
+.services__wrapper h3 {
   margin: 0;
   margin-bottom: 50px;
   font-family: "Roboto-Condensed", "Arial", sans-serif;
@@ -1166,7 +1166,7 @@ button.focus-visible:focus {
   font-size: 36px;
 }
 
-.services__title--mobile {
+.services__wrapper h3[data-title-mobile] {
   display: none;
 }
 
@@ -1196,14 +1196,9 @@ button.focus-visible:focus {
 .services__list-link {
   min-height: 650px;
   padding-top: 48px;
-  padding-left: 40px;
+  padding-left: 45px;
   padding-right: 80px;
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
-  font-weight: 400;
   display: block;
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 30px;
   background-color: #00b2ff;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1225,8 +1220,13 @@ button.focus-visible:focus {
   background-image: url("../img/background-card-3.jpg");
 }
 
-.services__link-title {
+.services__list-link p {
   margin: 0;
+  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .services__button {
@@ -1330,6 +1330,22 @@ button.focus-visible:focus {
   color: #ffffff;
 }
 
+.form__content h3 {
+  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.form__content p {
+  margin: 0;
+  margin-bottom: 35px;
+  color: #ffffff;
+}
+
 .form__field {
   width: 100%;
   margin-bottom: 15px;
@@ -1385,22 +1401,6 @@ button.focus-visible:focus {
 }
 
 .form__field input::placeholder {
-  color: #ffffff;
-}
-
-.form__title {
-  font-family: "Roboto-Condensed", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 50px;
-  color: #ffffff;
-  margin: 0;
-  margin-bottom: 15px;
-}
-
-.form__text {
-  margin: 0;
-  margin-bottom: 35px;
   color: #ffffff;
 }
 
@@ -1576,7 +1576,7 @@ button.focus-visible:focus {
     padding: 10px;
   }
 
-  .header__link-text {
+  .header__link span {
     display: none;
   }
 
@@ -1627,13 +1627,13 @@ button.focus-visible:focus {
     padding: 180px 50px 0 50px;
   }
 
-  .intro__title {
+  .intro__wrapper h1 {
     font-size: 64px;
     line-height: 75px;
     margin-bottom: 0;
   }
 
-  .intro__text {
+  .intro__wrapper p {
     padding-right: 0;
     margin-bottom: 55px;
   }
@@ -1657,7 +1657,7 @@ button.focus-visible:focus {
     padding: 45px 40px 30px 40px;
   }
 
-  .benefits__suptitle {
+  .benefits__item h2 {
     margin-bottom: 15px;
   }
 
@@ -1680,6 +1680,10 @@ button.focus-visible:focus {
     padding-bottom: 75px;
   }
 
+  .services__wrapper h3 {
+    margin-bottom: 36px;
+  }
+
   .services__list-item {
     width: 100%;
   }
@@ -1697,8 +1701,8 @@ button.focus-visible:focus {
   }
 
   .services__list-link {
-    min-height: 245px;
-    padding-top: 25px;
+    min-height: 250px;
+    padding-top: 37px;
   }
 
   .form {
@@ -1726,16 +1730,16 @@ button.focus-visible:focus {
     padding: 33px 15px 12px;
   }
 
-  .form__field {
-    margin-bottom: 20px;
-  }
-
-  .form__title {
+  .form__content h3 {
     margin-bottom: 5px;
   }
 
-  .form__text {
+  .form__content p {
     margin-bottom: 26px;
+  }
+
+  .form__field {
+    margin-bottom: 20px;
   }
 
   .form__aprove {
@@ -1796,12 +1800,12 @@ button.focus-visible:focus {
     column-gap: 125px;
   }
 
-  .logo__img--header {
-    display: none;
+  .logo svg[data-logo-mobile] {
+    display: block;
   }
 
-  .logo__mobile-img {
-    display: block;
+  .logo svg[data-logo-header] {
+    display: none;
   }
 
   .footer {
@@ -1847,13 +1851,13 @@ button.focus-visible:focus {
     line-height: 19px;
   }
 
-  .footer__item:last-child {
-    padding-bottom: 20px;
-  }
-
-  .footer__list-link {
+  .footer__item a {
     font-size: 14px;
     line-height: 19px;
+  }
+
+  .footer__item:last-child {
+    padding-bottom: 20px;
   }
 
   .footer__title {
@@ -1901,13 +1905,13 @@ button.focus-visible:focus {
     padding: 150px 25px 0 25px;
   }
 
-  .intro__title {
+  .intro__wrapper h1 {
     font-size: 36px;
     line-height: 42px;
     margin-bottom: 8px;
   }
 
-  .intro__text {
+  .intro__wrapper p {
     font-size: 14px;
     line-height: 22px;
     margin-bottom: 44px;
@@ -1948,7 +1952,7 @@ button.focus-visible:focus {
     min-height: 345px;
   }
 
-  .benefits__suptitle {
+  .benefits__item h2 {
     font-size: 20px;
     line-height: 28px;
   }
@@ -1984,25 +1988,21 @@ button.focus-visible:focus {
 
   .services__wrapper {
     padding-top: 50px;
-    padding-bottom: 90px;
+    padding-bottom: 86px;
   }
 
-  .services__title {
+  .services__wrapper h3 {
     font-size: 28px;
     line-height: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
-  .services__title--tablet {
+  .services__wrapper h3[data-title-tablet] {
     display: none;
   }
 
-  .services__title--mobile {
+  .services__wrapper h3[data-title-mobile] {
     display: block;
-  }
-
-  .services__list {
-    row-gap: 35px;
   }
 
   .services__list-link--one {
@@ -2019,6 +2019,8 @@ button.focus-visible:focus {
 
   .services__list-link {
     font-size: 18px;
+    padding-top: 26px;
+    padding-left: 30px;
   }
 
   .services__button {
@@ -2039,20 +2041,20 @@ button.focus-visible:focus {
     padding-bottom: 33px;
   }
 
-  .form__field {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .form__title {
+  .form__content h3 {
     font-size: 30px;
     line-height: 42px;
   }
 
-  .form__text {
+  .form__content p {
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 35px;
+  }
+
+  .form__field {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .form__aprove {
@@ -2097,11 +2099,11 @@ button.focus-visible:focus {
     opacity: 0.8;
   }
 
-  .footer__list-link:hover:not(.focus-visible) {
+  .footer__icon-list a:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 
-  .footer__icon-link:hover:not(.focus-visible) {
+  .footer__item a:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 
@@ -2114,15 +2116,15 @@ button.focus-visible:focus {
     color: #f2f5f6;
   }
 
-  .benefits__item:hover:not(.focus-visible) .benefits__icon {
+  .benefits__item:hover:not(.focus-visible) svg {
     fill: #f2f5f6;
   }
 
-  .benefits__item:hover:not(.focus-visible) .benefits__suptitle {
+  .benefits__item:hover:not(.focus-visible) h2 {
     color: #f2f5f6;
   }
 
-  .benefits__item:hover:not(.focus-visible) .benefits__text {
+  .benefits__item:hover:not(.focus-visible) p {
     color: #f2f5f6;
   }
 

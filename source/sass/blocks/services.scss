@@ -13,33 +13,37 @@
 
   @include vp-767 {
     padding-top: 50px;
-    padding-bottom: 90px;
-  }
-}
-
-.services__title {
-  margin: 0;
-  margin-bottom: 50px;
-  font-family: $font-roboto-condensed;
-  font-weight: 400;
-  line-height: 50px;
-  font-size: 36px;
-
-  &--mobile {
-    display: none;
+    padding-bottom: 86px;
   }
 
-  @include vp-767 {
-    font-size: 28px;
-    line-height: 40px;
-    margin-bottom: 25px;
+  h3 {
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: $font-roboto-condensed;
+    font-weight: 400;
+    line-height: 50px;
+    font-size: 36px;
 
-    &--tablet {
+    &[data-title-mobile] {
       display: none;
     }
 
-    &--mobile {
-      display: block;
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 40px;
+      margin-bottom: 24px;
+
+      &[data-title-tablet] {
+        display: none;
+      }
+
+      &[data-title-mobile] {
+        display: block;
+      }
+    }
+
+    @include vp-1023 {
+      margin-bottom: 36px;
     }
   }
 }
@@ -53,10 +57,6 @@
   justify-content: flex-start;
   column-gap: 79px;
   row-gap: 30px;
-
-  @include vp-767 {
-    row-gap: 35px;
-  }
 }
 
 .services__list-item {
@@ -71,14 +71,9 @@
 .services__list-link {
   min-height: 650px;
   padding-top: 48px;
-  padding-left: 40px;
+  padding-left: 45px;
   padding-right: 80px;
-  font-family: $font-roboto-condensed;
-  font-weight: 400;
   display: block;
-  color: $color-default-white;
-  font-size: 20px;
-  line-height: 30px;
   background-color: $color-sky-blue;
   background-size: cover;
   background-repeat: no-repeat;
@@ -160,17 +155,24 @@
   }
 
   @include vp-1023 {
-    min-height: 245px;
-    padding-top: 25px;
+    min-height: 250px;
+    padding-top: 37px;
   }
 
   @include vp-767 {
     font-size: 18px;
+    padding-top: 26px;
+    padding-left: 30px;
   }
-}
 
-.services__link-title {
-  margin: 0;
+  p {
+    margin: 0;
+    font-family: $font-roboto-condensed;
+    font-weight: 400;
+    color: $color-default-white;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .services__button {
