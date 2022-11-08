@@ -1,6 +1,10 @@
 .wrapper {
   position: relative;
 
+  &--popup {
+    background-color: $color-shades-black-pearl;
+  }
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;

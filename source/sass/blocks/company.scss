@@ -98,9 +98,13 @@ button {
   color: $color-sky-blue;
   padding: 0 13px;
   justify-content: center;
+  transition: $trans-600;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.8;
+    color: $color-black-pearl;
+    border: 1px solid $color-black-pearl;
   }
 
   @include vp-767 {

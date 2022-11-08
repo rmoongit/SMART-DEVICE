@@ -1,6 +1,7 @@
 import createMask from 'imask';
 
 const phoneElement = document.querySelectorAll('[data-form="phone"]');
+
 const initMask = () => {
 
   phoneElement.forEach((element) => {

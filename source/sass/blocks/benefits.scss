@@ -36,6 +36,7 @@
   border-left: 5px solid $color-sky-blue;
   padding: 42px 40px 35px 40px;
   min-height: 300px;
+  transition: $trans-600;
 
   @include hover {
     background-color: $color-sky-blue;

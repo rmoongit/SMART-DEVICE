@@ -77,6 +77,8 @@
   background-color: $color-sky-blue;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: $trans-default;
+  user-select: none;
 
   @include hover-focus {
     opacity: 0.8;
@@ -186,6 +188,7 @@
   display: block;
   width: 60px;
   height: 60px;
+  transition: $trans-default;
 
   @include hover-focus {
     opacity: 0.8;

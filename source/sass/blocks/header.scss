@@ -63,6 +63,7 @@
   column-gap: 15px;
   line-height: 18px;
   color: $color-alice-blue;
+  transition: $trans-default;
 
   @include hover-focus {
     opacity: 0.8;

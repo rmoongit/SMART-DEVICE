@@ -566,6 +566,10 @@ button,
   min-height: calc(100 * var(--vh, 1vh));
 }
 
+.wrapper--popup {
+  background-color: #041427;
+}
+
 .wrapper .header,
 .wrapper .footer {
   -ms-flex-negative: 0;
@@ -649,6 +653,10 @@ button,
   background-color: #2c39f2;
   border: none;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -837,9 +845,22 @@ button,
   column-gap: 15px;
   line-height: 18px;
   color: #f2f5f6;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .header__link.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.logo {
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.logo.focus-visible:focus {
   opacity: 0.8;
 }
 
@@ -895,6 +916,12 @@ button,
   list-style: none;
 }
 
+.footer__icon-list a {
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
 .footer__icon-list a.focus-visible:focus {
   opacity: 0.8;
 }
@@ -939,6 +966,9 @@ button,
 
 .footer__item a {
   color: #ffffff;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .footer__item a.focus-visible:focus {
@@ -1014,6 +1044,13 @@ button,
   line-height: 21px;
   font-size: 18px;
   letter-spacing: 0.05em;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .intro__link.focus-visible:focus {
@@ -1052,6 +1089,9 @@ button,
   border-left: 5px solid #00b2ff;
   padding: 42px 40px 35px 40px;
   min-height: 300px;
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  transition: 0.6s ease;
 }
 
 .benefits__item h2 {
@@ -1142,10 +1182,19 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+  transition: 0.6s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 button.focus-visible:focus {
   opacity: 0.8;
+  color: #041827;
+  border: 1px solid #041827;
 }
 
 .services {
@@ -1202,6 +1251,13 @@ button.focus-visible:focus {
   background-color: #00b2ff;
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .services__list-link.focus-visible:focus {
@@ -1240,6 +1296,9 @@ button.focus-visible:focus {
   display: block;
   width: 60px;
   height: 60px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .services__button.focus-visible:focus {
@@ -1304,10 +1363,14 @@ button.focus-visible:focus {
   background-color: rgba(4, 20, 39, 0.15);
   margin-bottom: 35px;
   outline: none;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .form__content textarea.focus-visible:focus {
   opacity: 0.8;
+  outline: 1px solid #ffffff;
 }
 
 .form__content textarea::-webkit-input-placeholder {
@@ -1372,6 +1435,9 @@ button.focus-visible:focus {
 
 .form__field input {
   background-color: rgba(4, 20, 39, 0.15);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
   color: #ffffff;
   border: none;
   border-radius: 3px;
@@ -1382,6 +1448,7 @@ button.focus-visible:focus {
 
 .form__field input.focus-visible:focus {
   opacity: 0.8;
+  outline: 1px solid #ffffff;
 }
 
 .form__field input::-webkit-input-placeholder {
@@ -1429,6 +1496,9 @@ button.focus-visible:focus {
   width: 265px;
   height: 45px;
   cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .form__aprove input[type=submit].focus-visible:focus {
@@ -1493,6 +1563,7 @@ button.focus-visible:focus {
   display: block;
 }
 
+.form__aprove input[type=checkbox]:hover + span::before,
 .form__aprove input[type=checkbox]:focus + span::before {
   outline: 2px solid #f2f5f6;
 }
@@ -2099,6 +2170,10 @@ button.focus-visible:focus {
     opacity: 0.8;
   }
 
+  .logo:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
   .footer__icon-list a:hover:not(.focus-visible) {
     opacity: 0.8;
   }
@@ -2130,6 +2205,8 @@ button.focus-visible:focus {
 
   button:hover:not(.focus-visible) {
     opacity: 0.8;
+    color: #041827;
+    border: 1px solid #041827;
   }
 
   .services__list-link:hover:not(.focus-visible) {
@@ -2142,10 +2219,12 @@ button.focus-visible:focus {
 
   .form__content textarea:hover:not(.focus-visible) {
     opacity: 0.8;
+    outline: 1px solid #ffffff;
   }
 
   .form__field input:hover:not(.focus-visible) {
     opacity: 0.8;
+    outline: 1px solid #ffffff;
   }
 
   .form__aprove input[type=submit]:hover:not(.focus-visible) {

@@ -70,9 +70,11 @@
     background-color: $color-tints-black-pearl;
     margin-bottom: 35px;
     outline: none;
+    transition: $trans-default;
 
     @include hover-focus {
       opacity: 0.8;
+      outline: 1px solid $color-default-white;
     }
 
     &::placeholder {
@@ -150,6 +152,7 @@
 
   input {
     background-color: $color-tints-black-pearl;
+    transition: $trans-default;
     color: $color-default-white;
     border: none;
     border-radius: 3px;
@@ -159,6 +162,7 @@
 
     @include hover-focus {
       opacity: 0.8;
+      outline: 1px solid $color-default-white;
     }
 
     &::placeholder {
@@ -194,6 +198,7 @@
     width: 265px;
     height: 45px;
     cursor: pointer;
+    transition: $trans-default;
 
     @include hover-focus {
       opacity: 0.8;
@@ -261,6 +266,7 @@
     display: block;
   }
 
+  input[type="checkbox"]:hover + span::before,
   input[type="checkbox"]:focus + span::before {
     outline: 2px solid $color-alice-blue;
   }

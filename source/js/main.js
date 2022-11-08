@@ -2,8 +2,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initShowText} from './modules/company-text';
 import {initScroll} from './modules/scroll';
-import {initMask} from './modules/mask';
 import {initAccordeon, resize} from './modules/accordeon';
+import {initForm} from './modules/storage';
 
 // ---------------------------------
 
@@ -18,9 +18,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  document.querySelectorAll('.form').forEach(initForm);
   initShowText();
   initScroll();
-  initMask();
   initAccordeon();
   resize();
 
