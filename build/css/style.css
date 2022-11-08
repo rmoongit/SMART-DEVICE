@@ -670,6 +670,7 @@ button,
   font-size: 14px;
   width: 160px;
   text-transform: uppercase;
+  margin-right: 60px;
 }
 
 .btn:disabled {
@@ -811,9 +812,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 160px;
-  -moz-column-gap: 160px;
-  column-gap: 160px;
   row-gap: 10px;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -822,6 +820,9 @@ button,
   flex-wrap: wrap;
   padding-top: 30px;
   padding-bottom: 35px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .header__list {
@@ -1226,8 +1227,6 @@ button.focus-visible:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -1239,7 +1238,7 @@ button.focus-visible:focus {
 
 .services__list-item {
   position: relative;
-  width: 29%;
+  width: 100%;
 }
 
 .services__list-link {
@@ -1623,9 +1622,6 @@ button.focus-visible:focus {
   }
 
   .header__wrapper {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 40px;
   }
@@ -1753,6 +1749,11 @@ button.focus-visible:focus {
 
   .services__wrapper h3 {
     margin-bottom: 36px;
+  }
+
+  .services__list {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .services__list-item {
@@ -1899,7 +1900,7 @@ button.focus-visible:focus {
     background-color: rgba(248, 253, 255, 0.6980392157);
   }
 
-  .footer__list-wrapper::after {
+  .footer__list-wrapper:last-child::after {
     position: absolute;
     bottom: 0;
     left: -25px;
@@ -1907,10 +1908,6 @@ button.focus-visible:focus {
     width: 100vw;
     height: 1px;
     background-color: rgba(248, 253, 255, 0.6980392157);
-  }
-
-  .footer__list-wrapper:last-child::before {
-    display: none;
   }
 
   .footer__list {

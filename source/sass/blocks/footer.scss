@@ -60,7 +60,7 @@
       background-color: $color-shalimar;
     }
 
-    &::after {
+    &:last-child::after {
       position: absolute;
       bottom: 0;
       left: -25px;
@@ -68,14 +68,6 @@
       width: 100vw;
       height: 1px;
       background-color: $color-shalimar;
-    }
-  }
-}
-
-.footer__list-wrapper:last-child {
-  @include vp-767 {
-    &::before {
-      display: none;
     }
   }
 }

@@ -1,10 +1,10 @@
 const buttonElement = document.querySelector('[data-company-button]');
-const textElement = document.querySelectorAll('[data-company-text]');
+const textElements = document.querySelectorAll('[data-company-text]');
 const pElement = document.querySelector('[data-company-hide]');
 
 
 const showText = () => {
-  const lastElem = textElement[textElement.length - 1];
+  const lastElem = textElements[textElements.length - 1];
 
   if (lastElem.dataset.companyText === 'open') {
     lastElem.dataset.companyText = '';
