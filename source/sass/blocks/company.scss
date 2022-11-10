@@ -1,19 +1,19 @@
 .company {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 
   @include vp-1023 {
     margin-bottom: 77px;
   }
 
   @include vp-767 {
-    margin-bottom: 80px;
+    margin-bottom: 76px;
   }
 }
 
 .company__wrapper {
   display: flex;
-  align-items: flex-end;
-  padding: 0;
+  align-items: flex-start;
+  padding: 20px 13px 0 15px;
 
   picture {
     align-self: flex-start;
@@ -24,7 +24,7 @@
   }
 
   img {
-    margin-right: 120px;
+    margin-right: 105px;
 
     @include vp-1023 {
       margin-right: 28px;
@@ -40,7 +40,7 @@
 .company__about {
   h3 {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-family: $font-roboto-condensed;
     font-size: 36px;
     line-height: 50px;
@@ -55,22 +55,26 @@
 
   p {
     color: $color-black-pearl;
-    margin: 0;
-    margin-bottom: 33px;
+    margin: -6px 0 28px;
 
     @include vp-1023 {
-      margin-bottom: 23px;
+      margin-bottom: 33px;
     }
 
     @include vp-767 {
       font-size: 14px;
       line-height: 19px;
       font-weight: 400;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     span {
       display: block;
+      margin-bottom: 46px;
+
+      @include vp-1023 {
+        margin-bottom: -15px;
+      }
 
       @include vp-767 {
         display: none;

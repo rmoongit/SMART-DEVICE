@@ -35,7 +35,7 @@
   background-image: url("../img/airplane.png");
   background-repeat: no-repeat;
   background-size: 510px 285px;
-  background-position: left center;
+  background-position: 3% 55%;
 
   @include retina {
     background-image: url("../img/airplane@2x.png");
@@ -82,11 +82,13 @@
     }
 
     @include vp-1023 {
-      padding: 33px 15px 12px;
+      padding: 33px 15px 14px;
     }
 
     @include vp-767 {
-      padding-bottom: 33px;
+      padding-bottom: 45px;
+      margin-bottom: 30px;
+      padding-top: 27px;
     }
   }
 
@@ -98,6 +100,12 @@
     color: $color-default-white;
     margin: 0;
     margin-bottom: 15px;
+
+    &[data-form-title] {
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 5px;
+    }
 
     @include vp-1023 {
       margin-bottom: 5px;
@@ -199,6 +207,7 @@
     height: 45px;
     cursor: pointer;
     transition: $trans-default;
+    letter-spacing: 0.05em;
 
     @include hover-focus {
       opacity: 0.8;

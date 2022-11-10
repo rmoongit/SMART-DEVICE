@@ -3,11 +3,11 @@
   margin-bottom: 100px;
 
   @include vp-1023 {
-    margin-bottom: 80px;
+    margin-bottom: 74px;
   }
 
   @include vp-767 {
-    margin-bottom: 25px;
+    margin-bottom: 45px;
   }
 }
 
@@ -18,23 +18,23 @@
   margin: 0;
   list-style: none;
   column-gap: 15px;
-  row-gap: 20px;
+  row-gap: 30px;
 
   @include vp-1023 {
     grid-template-columns: 48% 48%;
-    gap: 25px;
+    column-gap: 29px;
   }
 
   @include vp-767 {
     grid-template-columns: auto;
-    gap: 20px;
+    row-gap: 30px;
   }
 }
 
 .benefits__item {
   border: 1px solid $color-grey;
   border-left: 5px solid $color-sky-blue;
-  padding: 42px 40px 35px 40px;
+  padding: 40px 40px 35px 40px;
   min-height: 300px;
   transition: $trans-600;
 
@@ -57,20 +57,21 @@
 
   @include vp-1023 {
     min-height: 360px;
-    padding: 45px 40px 30px 40px;
+    padding: 38px 40px 20px 40px;
   }
 
   @include vp-767 {
     width: 100%;
-    padding: 30px 30px 35px;
+    padding: 30px 30px 35px 25px;
     font-size: 14px;
-    line-height: 18px;
-    min-height: 345px;
+    line-height: 19px;
+    min-height: 340px;
   }
 
   h2 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     font-family: $font-roboto-condensed;
     color: $color-sky-blue;
     font-size: 24px;
@@ -78,11 +79,21 @@
 
     @include vp-1023 {
       margin-bottom: 15px;
+      margin-top: 10px;
+
+      &[data-benefits-title] {
+        margin-bottom: 4px;
+
+        @include vp-767 {
+          margin-bottom: 16px;
+        }
+      }
     }
 
     @include vp-767 {
       font-size: 20px;
       line-height: 28px;
+      margin-bottom: 10px;
     }
   }
 
@@ -90,8 +101,19 @@
     margin: 0;
     color: $color-black-pearl;
   }
-}
 
-svg {
-  fill: $color-sky-blue;
+  &--last {
+    @include vp-767 {
+      min-height: 325px;
+    }
+  }
+
+  svg {
+    fill: $color-sky-blue;
+
+    @include vp-767 {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }

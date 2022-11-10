@@ -1,6 +1,6 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 10px 15px;
   color: $color-default-white;
   background-color: $color-neon-blue;
   border: none;
@@ -10,14 +10,18 @@
   transition: opacity $trans-default;
 
   &--button-call {
+    padding: 10px 15px 10px 17px;
     background-color: $color-transparent;
     border: solid 1px $color-alice-blue;
     font-family: $font-roboto-condensed;
     font-weight: 700;
     font-size: 14px;
-    width: 160px;
+    width: 164px;
     text-transform: uppercase;
     margin-right: 60px;
+    letter-spacing: 0.05em;
+    line-height: 16px;
+    border-radius: 3px;
   }
 
   &:disabled {

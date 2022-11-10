@@ -11,6 +11,7 @@
   }
 
   @include vp-1023 {
+    margin-top: -114px;
     min-height: 640px;
     margin-bottom: 80px;
     background-image: url("../img/main-background-tablet.jpg");
@@ -23,6 +24,7 @@
   @include vp-767 {
     min-height: 560px;
     margin-bottom: 50px;
+    margin-top: -70px;
     background-image: url("../img/main-background-mobile.jpg");
 
     @include retina {
@@ -34,14 +36,14 @@
 .intro__wrapper {
   max-width: $vp-1024;
   margin: 0 auto;
-  padding: 300px 25px 0 25px;
+  padding: 300px 25px 25px 25px;
 
   @include vp-1023 {
-    padding: 180px 50px 0 50px;
+    padding: 180px 50px 150px 50px;
   }
 
   @include vp-767 {
-    padding: 150px 25px 0 25px;
+    padding: 150px 25px 150px 25px;
   }
 
   h1 {
@@ -119,7 +121,7 @@
   }
 
   @include vp-1023 {
-    margin-left: 50px;
+    margin-left: 45px;
   }
 
   @include vp-767 {

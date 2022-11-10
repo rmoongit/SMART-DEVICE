@@ -648,7 +648,7 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 10px 15px;
   color: #ffffff;
   background-color: #2c39f2;
   border: none;
@@ -663,14 +663,18 @@ button,
 }
 
 .btn--button-call {
+  padding: 10px 15px 10px 17px;
   background-color: rgba(255, 255, 255, 0);
   border: solid 1px #f2f5f6;
   font-family: "Roboto-Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
-  width: 160px;
+  width: 164px;
   text-transform: uppercase;
   margin-right: 60px;
+  letter-spacing: 0.05em;
+  line-height: 16px;
+  border-radius: 3px;
 }
 
 .btn:disabled {
@@ -747,15 +751,16 @@ button,
 
 .modal__content {
   position: relative;
-  width: 600px;
-  padding: 40px;
+  width: 500px;
+  min-height: 610px;
+  padding: 40px 40px 40px;
   background-color: #00b2ff;
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 32px;
-  right: 22px;
+  top: 15px;
+  right: 15px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -818,7 +823,7 @@ button,
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-top: 30px;
+  padding-top: 25px;
   padding-bottom: 35px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -829,6 +834,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 10px;
   -webkit-column-gap: 125px;
   -moz-column-gap: 125px;
   column-gap: 125px;
@@ -895,11 +903,8 @@ button,
 .footer__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 30% 28%;
-  grid-template-columns: auto 30% 28%;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-grid-columns: auto 38.8% 28%;
+  grid-template-columns: auto 38.8% 28%;
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
@@ -912,9 +917,12 @@ button,
   -webkit-column-gap: 25px;
   -moz-column-gap: 25px;
   column-gap: 25px;
+  row-gap: 20px;
   padding: 0;
   margin: 40px 15px 0;
   list-style: none;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .footer__icon-list a {
@@ -943,26 +951,29 @@ button,
   flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  row-gap: 11px;
-  -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+  gap: 10px 30px;
   padding: 0;
+  padding-left: 1px;
   margin: 0;
   list-style: none;
-  overflow: hidden;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  max-height: auto;
+  max-height: 100%;
 }
 
 .footer__list--site {
-  height: 144px;
+  height: 150px;
+}
+
+.footer__list--office .footer__item {
+  max-width: 100%;
 }
 
 .footer__item {
   opacity: 0.7;
+  width: 100%;
+  max-width: 220px;
 }
 
 .footer__item a {
@@ -985,6 +996,7 @@ button,
   line-height: 16px;
   text-transform: uppercase;
   font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 .footer__title.focus-visible:focus {
@@ -1007,7 +1019,7 @@ button,
 .intro__wrapper {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 300px 25px 0 25px;
+  padding: 300px 25px 25px 25px;
 }
 
 .intro__wrapper h1 {
@@ -1082,13 +1094,13 @@ button,
   -webkit-column-gap: 15px;
   -moz-column-gap: 15px;
   column-gap: 15px;
-  row-gap: 20px;
+  row-gap: 30px;
 }
 
 .benefits__item {
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
-  padding: 42px 40px 35px 40px;
+  padding: 40px 40px 35px 40px;
   min-height: 300px;
   -webkit-transition: 0.6s ease;
   -o-transition: 0.6s ease;
@@ -1097,7 +1109,8 @@ button,
 
 .benefits__item h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   font-family: "Roboto-Condensed", "Arial", sans-serif;
   color: #00b2ff;
   font-size: 24px;
@@ -1109,22 +1122,22 @@ button,
   color: #041827;
 }
 
-svg {
+.benefits__item svg {
   fill: #00b2ff;
 }
 
 .company {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .company__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  padding: 0;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 20px 13px 0 15px;
 }
 
 .company__wrapper picture {
@@ -1139,12 +1152,12 @@ svg {
 }
 
 .company__wrapper img {
-  margin-right: 120px;
+  margin-right: 105px;
 }
 
 .company__about h3 {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-family: "Roboto-Condensed", "Arial", sans-serif;
   font-size: 36px;
   line-height: 50px;
@@ -1154,12 +1167,12 @@ svg {
 
 .company__about p {
   color: #041827;
-  margin: 0;
-  margin-bottom: 33px;
+  margin: -6px 0 28px;
 }
 
 .company__about p span {
   display: block;
+  margin-bottom: 46px;
 }
 
 .company__about [data-company-text=open] {
@@ -1234,11 +1247,13 @@ button.focus-visible:focus {
   -moz-column-gap: 79px;
   column-gap: 79px;
   row-gap: 30px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .services__list-item {
   position: relative;
-  width: 100%;
+  width: 29%;
 }
 
 .services__list-link {
@@ -1331,7 +1346,7 @@ button.focus-visible:focus {
   background-image: url("../img/airplane.png");
   background-repeat: no-repeat;
   background-size: 510px 285px;
-  background-position: left center;
+  background-position: 3% 55%;
 }
 
 .form__content {
@@ -1400,6 +1415,12 @@ button.focus-visible:focus {
   color: #ffffff;
   margin: 0;
   margin-bottom: 15px;
+}
+
+.form__content h3[data-form-title] {
+  font-size: 30px;
+  line-height: 42px;
+  margin-bottom: 5px;
 }
 
 .form__content p {
@@ -1498,6 +1519,7 @@ button.focus-visible:focus {
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
+  letter-spacing: 0.05em;
 }
 
 .form__aprove input[type=submit].focus-visible:focus {
@@ -1619,6 +1641,7 @@ button.focus-visible:focus {
 
   .header {
     min-height: 100px;
+    position: relative;
   }
 
   .header__wrapper {
@@ -1656,14 +1679,15 @@ button.focus-visible:focus {
     margin: 0;
   }
 
-  .footer__list--site {
-    height: 100%;
-  }
-
   .footer__list {
     max-height: auto;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    row-gap: 8px;
+  }
+
+  .footer__list--site {
+    height: 100%;
   }
 
   .footer__title {
@@ -1681,17 +1705,18 @@ button.focus-visible:focus {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
   }
 
   .intro {
+    margin-top: -114px;
     min-height: 640px;
     margin-bottom: 80px;
     background-image: url("../img/main-background-tablet.jpg");
   }
 
   .intro__wrapper {
-    padding: 180px 50px 0 50px;
+    padding: 180px 50px 150px 50px;
   }
 
   .intro__wrapper h1 {
@@ -1706,26 +1731,33 @@ button.focus-visible:focus {
   }
 
   .intro__link {
-    margin-left: 50px;
+    margin-left: 45px;
   }
 
   .benefits {
-    margin-bottom: 80px;
+    margin-bottom: 74px;
   }
 
   .benefits__list {
     -ms-grid-columns: 48% 48%;
     grid-template-columns: 48% 48%;
-    gap: 25px;
+    -webkit-column-gap: 29px;
+    -moz-column-gap: 29px;
+    column-gap: 29px;
   }
 
   .benefits__item {
     min-height: 360px;
-    padding: 45px 40px 30px 40px;
+    padding: 38px 40px 20px 40px;
   }
 
   .benefits__item h2 {
     margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  .benefits__item h2[data-benefits-title] {
+    margin-bottom: 4px;
   }
 
   .company {
@@ -1739,21 +1771,20 @@ button.focus-visible:focus {
   }
 
   .company__about p {
-    margin-bottom: 23px;
+    margin-bottom: 33px;
+  }
+
+  .company__about p span {
+    margin-bottom: -15px;
   }
 
   .services__wrapper {
     padding-top: 60px;
-    padding-bottom: 75px;
+    padding-bottom: 76px;
   }
 
   .services__wrapper h3 {
     margin-bottom: 36px;
-  }
-
-  .services__list {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
   }
 
   .services__list-item {
@@ -1799,7 +1830,7 @@ button.focus-visible:focus {
   }
 
   .form__content textarea {
-    padding: 33px 15px 12px;
+    padding: 33px 15px 14px;
   }
 
   .form__content h3 {
@@ -1839,6 +1870,12 @@ button.focus-visible:focus {
   }
 }
 
+@media (max-width: 1023px) and (max-width: 767px) {
+  .benefits__item h2[data-benefits-title] {
+    margin-bottom: 16px;
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     padding: 0 25px;
@@ -1872,6 +1909,10 @@ button.focus-visible:focus {
     column-gap: 125px;
   }
 
+  .header__list {
+    margin-right: 0;
+  }
+
   .logo svg[data-logo-mobile] {
     display: block;
   }
@@ -1882,7 +1923,7 @@ button.focus-visible:focus {
 
   .footer {
     padding-bottom: 35px;
-    padding-top: 40px;
+    padding-top: 35px;
   }
 
   .footer__wrapper {
@@ -1911,7 +1952,9 @@ button.focus-visible:focus {
   }
 
   .footer__list {
+    overflow: hidden;
     max-height: 0;
+    row-gap: 14px;
   }
 
   .footer__item {
@@ -1925,11 +1968,13 @@ button.focus-visible:focus {
   }
 
   .footer__item:last-child {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
 
   .footer__title {
-    padding-top: 20px;
+    padding-top: 22px;
+    padding-bottom: 21px;
+    letter-spacing: 1px;
   }
 
   .footer__title::after,
@@ -1954,23 +1999,24 @@ button.focus-visible:focus {
 
   .footer__logo {
     margin-right: 0;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    row-gap: 15px;
+    row-gap: 20px;
   }
 
   .intro {
     min-height: 560px;
     margin-bottom: 50px;
+    margin-top: -70px;
     background-image: url("../img/main-background-mobile.jpg");
   }
 
   .intro__wrapper {
-    padding: 150px 25px 0 25px;
+    padding: 150px 25px 150px 25px;
   }
 
   .intro__wrapper h1 {
@@ -2003,30 +2049,40 @@ button.focus-visible:focus {
   }
 
   .benefits {
-    margin-bottom: 25px;
+    margin-bottom: 45px;
   }
 
   .benefits__list {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
-    gap: 20px;
+    row-gap: 30px;
   }
 
   .benefits__item {
     width: 100%;
-    padding: 30px 30px 35px;
+    padding: 30px 30px 35px 25px;
     font-size: 14px;
-    line-height: 18px;
-    min-height: 345px;
+    line-height: 19px;
+    min-height: 340px;
   }
 
   .benefits__item h2 {
     font-size: 20px;
     line-height: 28px;
+    margin-bottom: 10px;
+  }
+
+  .benefits__item--last {
+    min-height: 325px;
+  }
+
+  .benefits__item svg {
+    width: 30px;
+    height: 30px;
   }
 
   .company {
-    margin-bottom: 80px;
+    margin-bottom: 76px;
   }
 
   .company__wrapper img {
@@ -2042,7 +2098,7 @@ button.focus-visible:focus {
     font-size: 14px;
     line-height: 19px;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .company__about p span {
@@ -2106,7 +2162,9 @@ button.focus-visible:focus {
   }
 
   .form__content textarea {
-    padding-bottom: 33px;
+    padding-bottom: 45px;
+    margin-bottom: 30px;
+    padding-top: 27px;
   }
 
   .form__content h3 {

@@ -8,7 +8,7 @@
 
   @include vp-1023 {
     padding-top: 60px;
-    padding-bottom: 75px;
+    padding-bottom: 76px;
   }
 
   @include vp-767 {
@@ -56,15 +56,12 @@
   justify-content: flex-start;
   column-gap: 79px;
   row-gap: 30px;
-
-  @include vp-1023 {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 }
 
 .services__list-item {
   position: relative;
-  width: 100%;
+  width: 29%;
 
   @include vp-1023 {
     width: 100%;
