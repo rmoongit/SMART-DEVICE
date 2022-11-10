@@ -225,22 +225,22 @@
 
             <div class="form__field">
               <label for="name">
-                <input type="text" id="name" name="name" data-form="name" placeholder="Имя" tabindex="1" required>
+                <input type="text" id="name" name="name" data-form="name" placeholder="Имя" required>
               </label>
 
               <label for="phone">
                 <input type="tel" id="phone" name="phone" data-form="phone" placeholder="Телефон"
-                  pattern="^\+7\s?\(\d{3}\)\s?\d{3}\s?\d{2}\s?\d{2}$" tabindex="2" required>
+                  pattern="^\+7\s?\(\d{3}\)\s?\d{3}\s?\d{2}\s?\d{2}$" required>
               </label>
             </div>
 
-            <textarea name="question" id="question" cols="30" rows="6" data-form="area" placeholder="Ваш вопрос"
-              tabindex="3"></textarea>
+            <textarea name="question" id="question" cols="30" rows="6" data-form="area"
+              placeholder="Ваш вопрос"></textarea>
 
             <div class="form__aprove">
-              <input type="submit" value="Задать вопрос" tabindex="5" data-form-submit>
+              <input type="submit" value="Задать вопрос" data-form-submit>
               <label for="access">
-                <input class="visually-hidden" id="access" name="access" type="checkbox" tabindex="4" required>
+                <input class="visually-hidden" id="access" name="access" type="checkbox" required>
                 <span>Я согласен на обработку<br>персональных данных</span>
               </label>
             </div>
@@ -377,7 +377,8 @@
               </label>
             </div>
           </div>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal
+            tabindex="0">
             <svg width="20" height="20">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>
