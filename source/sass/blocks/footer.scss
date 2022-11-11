@@ -29,7 +29,7 @@
   column-gap: 25px;
   row-gap: 20px;
   padding: 0;
-  margin: 40px 15px 0;
+  margin: 30px 15px 0;
   list-style: none;
   flex-wrap: wrap;
 
@@ -99,10 +99,27 @@
   }
 
   &--site {
-    height: 150px;
+    display: block;
+    column-count: 2;
+
+    .footer__item {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 42px;
+
+        @include vp-1023 {
+          margin-bottom: 0;
+        }
+      }
+
+      @include vp-1023 {
+        margin-bottom: 0;
+      }
+    }
 
     @include vp-1023 {
-      height: 100%;
+      display: flex;
     }
   }
 
@@ -195,6 +212,15 @@
 .footer__logo {
   width: 100%;
 
+  a {
+    display: inline-block;
+
+    @include hover-focus {
+      transition: $trans-default;
+      opacity: 0.8;
+    }
+  }
+
   @include vp-1023 {
     display: flex;
     grid-column: 1/-1;
@@ -205,7 +231,7 @@
 
   @include vp-767 {
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 20px;

@@ -52,7 +52,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 48%;
+  width: 48.5%;
 
   &--modal {
     width: 100%;
@@ -182,11 +182,12 @@
 .form__aprove {
   width: 100%;
   display: flex;
-  column-gap: 50px;
+  column-gap: 57px;
   align-items: flex-end;
 
   @include vp-1023 {
     column-gap: 85px;
+    align-items: center;
   }
 
   @include vp-767 {
@@ -240,6 +241,10 @@
     vertical-align: middle;
     cursor: pointer;
 
+    @include vp-1023 {
+      margin-left: 25px;
+    }
+
     @include vp-767 {
       margin-left: 30px;
     }
@@ -255,6 +260,16 @@
       top: 50%;
       transform: translate(-50%, -50%);
       border-radius: 3px;
+
+      @include vp-1023 {
+        top: 50%;
+        left: 4%;
+      }
+
+      @include vp-767 {
+        top: 43%;
+        left: 5%;
+      }
     }
 
     &::after {
@@ -268,6 +283,16 @@
       top: 50%;
       transform: translate(-50%, -50%);
       display: none;
+
+      @include vp-1023 {
+        top: 55%;
+        left: 4%;
+      }
+
+      @include vp-767 {
+        top: 43%;
+        left: 5%;
+      }
     }
   }
 

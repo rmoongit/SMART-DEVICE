@@ -10,6 +10,7 @@
   transition: opacity $trans-default;
 
   &--button-call {
+    flex-shrink: 0;
     padding: 10px 15px 10px 17px;
     background-color: $color-transparent;
     border: solid 1px $color-alice-blue;

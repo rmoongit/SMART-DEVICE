@@ -13,11 +13,11 @@
 
 .benefits__list {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 49% 49%;
   padding: 0;
   margin: 0;
   list-style: none;
-  column-gap: 15px;
+  column-gap: 27px;
   row-gap: 30px;
 
   @include vp-1023 {
